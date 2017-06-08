@@ -4,7 +4,8 @@ console.log(sample);
 var bear = document.getElementsByClassName("bear")[0];
 var container = document.getElementsByClassName("container")[0];
 
-bear.addEventListener("click", function() {
+bear.addEventListener("click", function(event) {
+  event.preventDefault();
   var clone = sample.cloneNode(true);
   clone.style.visibility = "visible";
   var size = (Math.random() * 7) + 10;
