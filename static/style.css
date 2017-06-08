@@ -1,0 +1,31 @@
+:root {
+  --base-color: #ed7f40;
+  --ear-color: #ffba93;
+  --mouth-color: #f2af71;
+  --nose-color: #3a2614;
+  --eye-color: #191008;
+  --heart-color: #ff4242;
+}
+
+.sample {
+  visibility: hidden;
+  position: fixed;
+}
+
+.container {
+  position: fixed;
+  left: 25%;
+  width: 50%;
+  height: 100%;
+}
+
+html, body {
+  background-color: #f2f2f7;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.bear {
+  transition: width 2s, height 2s;
+}
