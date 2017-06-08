@@ -21,6 +21,7 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   pointer-events: auto;
+  -webkit-touch-callout: none;
 }
 
 html, body {
@@ -31,8 +32,13 @@ html, body {
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
 
 .bear {
   transition: width 2s, height 2s;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
 }
