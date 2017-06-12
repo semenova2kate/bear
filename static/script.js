@@ -28,6 +28,7 @@ function listener(event) {
   clone.style.left = positionY.toString() + "%";
   container.appendChild(clone);
   clone.addEventListener("click", function(event) {
+    event.preventDefault();
     container.removeChild(event.currentTarget);
     counter++;
     if (counter > 10) {
