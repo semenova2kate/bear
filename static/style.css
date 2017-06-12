@@ -12,6 +12,7 @@
 }
 
 .sample {
+  -webkit-appearance: none;
   visibility: hidden;
   position: fixed;
   user-select: none;
