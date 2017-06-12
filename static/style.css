@@ -17,6 +17,7 @@
   user-select: none;
   -moz-user-select: none;
   -webkit-user-select: none;
+  pointer-events: auto;
   -webkit-touch-callout: none;
 }
 
@@ -44,7 +45,7 @@ html, body {
   cursor: default;
 }
 
-.bear, cat {
+.bear, .cat {
   transition: width 2s, height 2s;
   user-select: none;
   -moz-user-select: none;
