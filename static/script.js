@@ -27,7 +27,13 @@ function listener(event) {
   clone.style.top = positionX.toString() + "%";
   clone.style.left = positionY.toString() + "%";
   container.appendChild(clone);
+
   clone.addEventListener("click", function(event) {
+    if (window.getSelection) {
+      window.getSelection().removeAllRanges();
+    } else { // старый IE
+      document.selection.empty();
+    }
     event.preventDefault();
     container.removeChild(event.currentTarget);
     counter++;
@@ -51,6 +57,5 @@ function listener(event) {
 
 bear.addEventListener("click", listener);
 cat.addEventListener("click", listener);
-
 
 
