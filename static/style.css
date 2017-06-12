@@ -5,6 +5,10 @@
   --nose-color: #3a2614;
   --eye-color: #191008;
   --heart-color: #ff4242;
+  --base-c-color: #ffc638;
+  --mouth-c-color: #fc6341;
+  --mustache-color: #603f2b;
+  --ear-c-color: #ed882f;
 }
 
 .sample {
@@ -12,7 +16,7 @@
   position: fixed;
 }
 
-.container {
+.container-bear, .container-cat {
   position: fixed;
   left: 25%;
   width: 50%;
@@ -36,7 +40,7 @@ html, body {
   cursor: default;
 }
 
-.bear {
+.bear, cat {
   transition: width 2s, height 2s;
   user-select: none;
   -moz-user-select: none;

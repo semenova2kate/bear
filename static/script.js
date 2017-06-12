@@ -1,10 +1,17 @@
 var sample = document.getElementsByClassName("sample")[0];
-console.log(sample);
 
 var bear = document.getElementsByClassName("bear")[0];
-var container = document.getElementsByClassName("container")[0];
+var cat = document.getElementsByClassName("cat")[0];
+var container_bear = document.getElementsByClassName("container-bear")[0];
+var container_cat = document.getElementsByClassName("container-cat")[0];
+var counter = 0;
 
-bear.addEventListener("click", function(event) {
+container_cat.style.display = "none";
+var container = container_bear;
+var b = true;
+
+
+function listener(event) {
   event.preventDefault();
   var clone = sample.cloneNode(true);
   clone.style.visibility = "visible";
@@ -19,8 +26,30 @@ bear.addEventListener("click", function(event) {
   clone.style.height = size.toString() + "%";
   clone.style.top = positionX.toString() + "%";
   clone.style.left = positionY.toString() + "%";
-  container.appendChild(clone);  
-});
+  container.appendChild(clone);
+  clone.addEventListener("click", function(event) {
+    container.removeChild(event.currentTarget);
+    counter++;
+    if (counter > 10) {
+       if (b) {
+         container = container_cat;
+         container_bear.style.display = "none";
+         container_cat.style.display = "block";
+         b = false;
+       }
+       else {
+         container = container_bear;
+         container_cat.style.display = "none";
+         container_bear.style.display = "block";
+         b = true;
+       }
+       counter = 0;
+    }
+  });  
+}
+
+bear.addEventListener("click", listener);
+cat.addEventListener("click", listener);
 
 
 
